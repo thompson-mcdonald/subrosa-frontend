@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUBROSA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        
+          <div class="header--logo">
+            <a href="/">
+              <img src="img/logo.svg" />
+            </a>
+          </div>
+          <div class="header--user">
+            <img src="" />
+            <a href="">Log out</a>
+          </div>
+
+      </header>
+
+      <div class="body">
+        <div class="menu">
+
+          <div class="touch-wrapper">
+            <ul>
+              <li><a href="index.html">Feed</a></li>
+              <li><a href="groups.html" class="active">Groups</a></li>
+              <li><a href="friends.html">Friends</a></li>
+              <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-lg btn-plus">Add new post</a>
+          </div>
+
+        </div>
+        <main class="content group-settings">
+
+          <div class="hero group-hero">
+            <h1 class="hero--title__fancy">Group Settings</h1>
+            <p class="hero--subtitle">24 Members &middot; You are admin</p>
+          </div>
+
+          <div class="group-settings--form form__outer">
+            <form>
+              <div class="field-row__single">
+                <div class="field-col-fw">
+                  <label for="title">Group Name</label>
+                  <input type="text" id="title" class="field" placeholder="Group Name" value="My Mates" /> 
+                </div>
+              </div>
+              <div class="field-row__single">
+                <div class="field-col-fw">
+                  <label for="description">Description</label>
+                  <textarea type="text" id="description" class="field" placeholder="Your name" > </textarea> 
+                </div>
+              </div>
+              <h2 class="hero--subtitle">Members</h2>
+              <div class="field-row__single">
+                <a href="" class="btn btn-black">Edit Group Members</a>
+              </div>
+              <div class="field-row__single">
+                <h2 class="hero--subtitle">New member policy</h2>
+                <div class="field-radio">
+                  <input type="radio" id="inviteonly" />
+                  <label for="requestaccess">Invite only</label>
+                </div>
+                <div class="field-radio">
+                  <input type="radio" id="requestaccess" />
+                  <label for="requestaccess">Request access</label>
+                </div>
+              </div>
+              <div class="field-confirm">
+                <input type="submit" value="Save Settings" class="btn btn-primary" />
+              </div>
+
+            </form>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

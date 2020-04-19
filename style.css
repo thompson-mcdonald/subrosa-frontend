@@ -340,6 +340,15 @@ form .hero--subtitle {
   border-radius: 4px;
 }
 
+.field-radio {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.field-radio label {
+  margin-left: .3rem;
+}
+
 /* HERO */ 
 
 .hero {
@@ -632,6 +641,7 @@ form .hero--subtitle {
   .post-nav--numbers {
     padding-top: 0;
     margin-left: 1rem;
+    opacity: .8;
   }
 
   .post-nav--buttons {
