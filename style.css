@@ -67,6 +67,11 @@ header {
   padding-top: 1.3rem;
 }
 
+.header-center  {
+  display: block;
+  text-align: center;
+}
+
 .header--logo img {
   min-width: 8rem;
 }
@@ -641,7 +646,7 @@ form .hero--subtitle {
 
 /* SETTINGS */
 
-.settings-form__outer form label {
+.form__outer form label {
   opacity: .9;
   margin-bottom: .5rem;
   display: block;
@@ -741,6 +746,10 @@ form .hero--subtitle {
     margin-bottom: 20px;
 }
 
+.newpost-form__outer .sound-upload--outer{
+  display: block;
+}
+
 @media (min-width: 670px) {
   .field-col {
     width: 50%;
@@ -768,3 +777,21 @@ form .hero--subtitle {
   }
   
 }
+
+
+.content.login {
+  text-align: center;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.content.login form {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: left;
+
+}
+
+/* .content.login form label {
+  text-align: left;
+} */
