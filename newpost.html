@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUBROSA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        
+          <div class="header--logo">
+            <a href="/">
+              <img src="img/logo.svg" />
+            </a>
+          </div>
+          <div class="header--user">
+            <img src="" />
+            <a href="">Log out</a>
+          </div>
+
+      </header>
+
+      <div class="body">
+        <div class="menu">
+
+          <div class="touch-wrapper">
+            <ul>
+              <li><a href="/">Feed</a></li>
+              <li><a href="/">Groups</a></li>
+              <li><a href="/">Friends</a></li>
+              <li><a href="/" class="active">Settings</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-lg btn-plus">Add new post</a>
+          </div>
+
+        </div>
+        <main class="content new-post">
+          <h1 class="hero--title__fancy">Add New Post</h1>
+          <div class="settings-form__outer">
+            <form>
+              <h2 class="hero--subtitle">Basic Information</h2>
+              <div class="field-row__single">
+                <div class="field-col-fw">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" class="field" placeholder="Post title" /> 
+                </div>
+              </div>
+              <div class="field-row__single">
+                <div class="field-col-fw">
+                  <label for="description">Description</label>
+                  <textarea type="text" id="description" class="field" placeholder="Your name" > </textarea> 
+                </div>
+              </div>
+
+              <h2 class="hero--subtitle">Metadata</h2>
+
+              <div class="field-row__double">
+                <div class="field-col">
+                  <label for="oldpassword">Album/Release</label>
+                  <input type="text" id="oldpassword" class="field" placeholder="Field day" /> 
+                </div>
+                <div class="field-col">
+                  <label for="oldpassword">Release Date</label>
+                  <input type="text" id="oldpassword" class="field" placeholder="15/03/2020" /> 
+                </div>
+              </div>
+
+              <div class="field-row__double">
+                <div class="field-col">
+                  <label for="newpassword">Record Label</label>
+                  <input type="text" id="newpassword" class="field" placeholder="eg: Circadian Rhythms" /> 
+                </div>
+                <div class="field-col">
+                  <label for="confirmnewpassword">ISRC</label>
+                  <input type="text" id="confirmnewpassword" class="field" placeholder="00000000000" /> 
+                </div>
+              </div>
+
+              <div class="field--sound-upload">
+                <label class="sound-upload--outer" for="sound-upload">Drag a .wav, .mp3, .flac here</label>
+                <input type="file" class="btn file-upload-button" id="sound-upload" />
+              </div>
+
+
+              <div class="field-confirm">
+                <input type="submit" value="Add new post" class="btn btn-primary" />
+              </div>
+
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
