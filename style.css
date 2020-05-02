@@ -29,7 +29,7 @@
 /* AND BODY */
 
 body {
-  background: #F5F6F6;
+  background: #FEFEFE;
   font-family: "CSB", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -.03rem;
@@ -56,6 +56,12 @@ body {
 a:link, a:visited {
   color: #2A2A2A;
   text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 1350px;
+  }
 }
 
 /* HEADER */
@@ -142,7 +148,7 @@ header {
   white-space: nowrap;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 740px) {
   .menu {
     width: 20%;
     display: inline-block;
@@ -177,7 +183,12 @@ header {
     border-bottom: none;
     padding: 1rem 0 ;
   }
+}
 
+@media (min-width: 900px) {
+  .menu {
+    width: 20%;
+  }
 }
 
 /* TYPOGRAPHY */ 
@@ -194,8 +205,8 @@ h1, h2, h3, h4, h5 {
 
 .hero--title__fancy {
   font-family: Times, serif;
-  transform: scaleY(1.4);
-  font-size: 3rem;
+  transform: scaleY(1.2);
+  font-size: 2.4rem;
   font-weight: 500;
 }
 
@@ -223,6 +234,10 @@ form .hero--subtitle {
 }
 
 @media (min-width: 540px) {
+  .hero--title__fancy {
+    font-size: 3rem;
+  }
+
   .hero--nav {
     position: absolute;
     right: 0;
@@ -247,11 +262,16 @@ form .hero--subtitle {
   font-size: .8rem;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-primary, a.btn-primary:link, a.btn-primary:visited {
   color: #E64D72;
   border: 2px solid #E64D72;
   padding: .5rem .7rem;
   text-decoration: none;
+  background: transparent;
 }
 
 .btn-black, a.btn-black:link, a.btn-black:visited {
@@ -315,6 +335,22 @@ form .hero--subtitle {
   margin-bottom: -1px;
 }
 
+.btn-trashcan:before {
+  content: "";
+  background-image: url("img/trashcan-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 15px;
+  min-width: 9px;
+  padding-right: 0.4rem;
+  margin-right: 0.4rem;
+  font-size: 1.5rem;
+  line-height: 0;
+  display: inline-block;
+  margin-bottom: -1px;
+}
+
 .btn-settings:before {
   content: "";
   background-image: url("img/settings.svg");
@@ -358,15 +394,17 @@ form .hero--subtitle {
 /* CONTENT */ 
 
 .content {
+  margin-top: 3rem;
   padding-bottom: 5rem;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 740px) {
   .content {
     width: 70%;
     display: inline-block;
     position: absolute;
     right: 0;
+    margin-top: 0;
   }
 
   .btn {
@@ -467,7 +505,7 @@ form .hero--subtitle {
   background-image: url("img/thumbs.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 80%;
   height: 20px;
   min-width: 13px;
   padding-right: 0.4rem;
@@ -483,7 +521,7 @@ form .hero--subtitle {
   background-image: url("img/bubble.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 80%;
   height: 20px;
   min-width: 13px;
   padding-right: 0.4rem;
@@ -729,6 +767,143 @@ form .hero--subtitle {
 .content.new-post .file-upload-button {
   display: none;
 }
+
+/* GROUP SETTINGS */
+
+.group-settings--edit-members {
+
+}
+
+.edit-members .table--outer {
+  padding: .4rem 0;
+}
+
+.edit-members .table--options {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: .5rem 0 .8rem; 
+  justify-content: space-between;
+}
+
+.table--search {
+  width: 100%;
+}
+
+.table--options .table--search input {
+  font-size: 1rem;
+  border: 1px solid #888;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 3px;
+}
+
+.edit-members table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.edit-members table .select-col {
+  width: 5%;
+}
+
+.edit-members table .name-col {
+  width: 70%;
+  display: flex;
+  align-items: center;;
+}
+
+.edit-members table .name-col .avatar {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.edit-members thead {
+  width: 100%;
+  background: #eee;
+  height: 2rem;
+  display: none;
+}
+
+.edit-members td {
+  padding-left: .2rem;
+}
+
+.edit-members thead tr td {
+  padding: 0 .4rem;
+  height: 1.4rem;
+}
+
+.edit-members tbody tr td {
+  padding: 0 .4rem;
+}
+
+.edit-members tbody tr {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.edit-members tbody tr:nth-child(even):hover, .edit-members tbody tr:hover {
+  background: #eee;
+}
+
+.edit-members tbody {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.edit-members tbody tr:nth-child(even) {
+  background: #F9F9F9;
+}
+
+
+.icon--trashcan {
+  background-image: url("img/trashcan.svg");
+  background-size: 100%;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.table--options .table--nav {
+  display: flex;
+  margin: 0 0 .6rem 0;
+}
+
+.table--options .table--nav a {
+  margin-right: .25rem;
+}
+
+
+@media (min-width: 640px) {
+  .edit-members table {
+    font-size: 1.3rem;
+  }
+
+  .edit-members thead tr td {
+    padding: .5rem 0.4rem;
+  }
+
+  .edit-members tbody tr td {
+    padding: .5rem 0.4rem;
+  }
+
+  .edit-members table .select-col {
+    width: 5%;
+  }
+
+  .edit-members table .name-col {
+    width: 70%;
+  }
+}
+
+
+/* UPLOAD */
 
 .sound-upload--outer {
   width: 100%;

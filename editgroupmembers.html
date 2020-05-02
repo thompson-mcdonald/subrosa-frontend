@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUBROSA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        
+          <div class="header--logo">
+            <a href="/">
+              <img src="img/logo.svg" />
+            </a>
+          </div>
+          <div class="header--user">
+            <img src="" />
+            <a href="">Log out</a>
+          </div>
+
+      </header>
+
+      <div class="body">
+        <div class="menu">
+
+          <div class="touch-wrapper">
+            <ul>
+              <li><a href="index.html">Feed</a></li>
+              <li><a href="groups.html" class="active">Groups</a></li>
+              <li><a href="friends.html">Friends</a></li>
+              <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-lg btn-plus">Add new post</a>
+          </div>
+
+        </div>
+        <main class="content group-settings">
+
+          <div class="hero group-hero">
+            <h1 class="hero--title__fancy">Group Members</h1>
+            <p class="hero--subtitle">24 Members &middot; You are admin</p>
+          </div>
+
+          <div class="group-settings--edit-members edit-members">
+            <div class="table--outer">
+              <div class="table--options">
+                <div class="table--nav">
+                  <a href="groupsettings.html" class="btn btn-black btn-trashcan">Remove Selected</a>
+                  <a href="groupsettings.html" class="btn btn-black btn-settings">Group Settings</a>
+                </div>
+                <div class="table--search">
+                  <input type="text" placeholder="search for user">
+                </div>
+              </div>  
+              <table class="table--users"> 
+                <thead>
+                  <tr>
+                    <td class="select-col">Select</td>
+                    <td class="name-col">Name</td> 
+                    <td>Remove</td>                 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="select-col"><input type="checkbox" /></td>
+                    <td class="name-col">
+                      <img src="img/img.jpg" class="avatar">
+                      Names
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="select-col"><input type="checkbox" /></td>
+                    <td class="name-col">
+                      <img src="img/img.jpg" class="avatar">
+                      Names
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="select-col"><input type="checkbox" /></td>
+                    <td class="name-col">
+                      <img src="img/img.jpg" class="avatar">
+                      Names
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="select-col"><input type="checkbox" /></td>
+                    <td class="name-col">
+                      <img src="img/img.jpg" class="avatar">
+                      Names
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
