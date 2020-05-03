@@ -199,6 +199,10 @@ h1, h2, h3, h4, h5 {
   color: #2A2A2A;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .hero--title {
   font-size: 1.5rem;
 }
@@ -303,6 +307,21 @@ form .hero--subtitle {
 .btn-add-member, .btn-settings, .btn-plus {
   display: flex;
   align-items: center;
+}
+
+.btn-white-plus:before {
+  content: "";
+  background-image: url("img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15px;
+  min-width: 9px;
+  padding-right: 0.4rem;
+  margin-right: 0.4rem;
+  font-size: 1.5rem;
+  line-height: 0;
+  display: inline-block;
+  margin-bottom: -1px;
 }
 
 .btn-plus:before {
@@ -417,6 +436,23 @@ form .hero--subtitle {
 .post--outer {
   padding: 2rem 0;
 }
+
+.post--outer.unpublished .post-content, .post--outer.unpublished .post-info {
+  opacity: .55;
+}
+
+.post--outer .group-info {
+  margin: 1rem 0;
+}
+
+.post--outer .group-info a:link, 
+.post--outer .group-info a:visited {
+  text-decoration: underline;
+} 
+
+.post--outer .group-info a:hover {
+  text-decoration: none;
+} 
 
 .content.compressed .post--outer {
   border-bottom: 2px solid #C3C4C4;
@@ -792,10 +828,17 @@ form .hero--subtitle {
 
 .table--options .table--search input {
   font-size: 1rem;
-  border: 1px solid #888;
+  padding: .8rem;
+  border: 1px solid #B2B2B2;
   width: 100%;
-  padding: .5rem;
   border-radius: 3px;
+  margin: 1rem 0;
+}
+
+.new-post table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
 }
 
 .edit-members table {
@@ -814,6 +857,16 @@ form .hero--subtitle {
   align-items: center;;
 }
 
+.edit-members table .name-col {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.edit-members table .date-col {
+  font-size: 1rem;
+}
+
 .edit-members table .name-col .avatar {
   width: 30px;
   height: 30px;
@@ -822,33 +875,33 @@ form .hero--subtitle {
   margin-right: 10px;
 }
 
-.edit-members thead {
+.edit-members thead, .new-post thead {
   width: 100%;
   background: #eee;
   height: 2rem;
   display: none;
 }
 
-.edit-members td {
+.edit-members td,.new-post thead td {
   padding-left: .2rem;
 }
 
-.edit-members thead tr td {
+.edit-members thead tr td, .new-post thead tr td {
   padding: 0 .4rem;
   height: 1.4rem;
 }
 
-.edit-members tbody tr td {
+.edit-members tbody tr td, .new-post tbody tr td {
   padding: 0 .4rem;
 }
 
-.edit-members tbody tr {
+.edit-members tbody tr, .new-post tbody tr {
   height: 4rem;
   display: flex;
   align-items: center;
 }
 
-.edit-members tbody tr:nth-child(even):hover, .edit-members tbody tr:hover {
+.edit-members tbody tr:nth-child(even):hover, .edit-members tbody tr:hover, .new-post tbody tr:nth-child(even):hover, .new-post tbody tr:hover {
   background: #eee;
 }
 
@@ -879,9 +932,57 @@ form .hero--subtitle {
   margin-right: .25rem;
 }
 
+.table--wrapper.clipped {
+  height: 400px;
+  overflow: scroll;
+  border-bottom: 1px solid #eee;
+}
+
+.new-post .table--wrapper.clipped {
+  height: 200px;
+  overflow: scroll;
+  border-bottom: 1px solid #eee;
+}
+
+table tr.current_member td {
+  color: #E64D72;
+}
+
+.add-members {
+  margin-top: 1.4rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.add-members--nav {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+}
+
+.add-members--nav .btn {
+  margin-right: .2rem;
+}
+
+.add-members--fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-members--field-wrapper {
+  width: 49%;
+}
+
+.save-changes--nav {
+  margin-top: 2rem;
+}
+
+.post-to-groups {
+  margin-top: 2.5rem;
+}
 
 @media (min-width: 640px) {
-  .edit-members table {
+  .edit-members table, .new-post table {
     font-size: 1.3rem;
   }
 
@@ -898,7 +999,7 @@ form .hero--subtitle {
   }
 
   .edit-members table .name-col {
-    width: 70%;
+    width: 60%;
   }
 }
 

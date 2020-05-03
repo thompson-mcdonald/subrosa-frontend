@@ -42,58 +42,96 @@
           </div>
 
           <div class="group-settings--edit-members edit-members">
+            <!--<div class="add-users">
+              <h3>Add new members</h4>
+              <div class="add-users--field">
+                <input class="add-new-members field" placeholder="Username or Email" />
+                <button class="btn btn-black" >Invite</button>
+              </div>
+            </div>-->
             <div class="table--outer">
+              <h2>Current Group Members</h2>
               <div class="table--options">
                 <div class="table--nav">
+                  <a href="groupsettings.html" class="btn btn-black btn-plus">Invite Selected</a>
                   <a href="groupsettings.html" class="btn btn-black btn-trashcan">Remove Selected</a>
-                  <a href="groupsettings.html" class="btn btn-black btn-settings">Group Settings</a>
                 </div>
                 <div class="table--search">
-                  <input type="text" placeholder="search for user">
+                  <input type="text" placeholder="Search for current & public subrosa users by Name, Email address" value="Jaime P">
                 </div>
               </div>  
-              <table class="table--users"> 
-                <thead>
-                  <tr>
-                    <td class="select-col">Select</td>
-                    <td class="name-col">Name</td> 
-                    <td>Remove</td>                 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="select-col"><input type="checkbox" /></td>
-                    <td class="name-col">
-                      <img src="img/img.jpg" class="avatar">
-                      Names
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="select-col"><input type="checkbox" /></td>
-                    <td class="name-col">
-                      <img src="img/img.jpg" class="avatar">
-                      Names
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="select-col"><input type="checkbox" /></td>
-                    <td class="name-col">
-                      <img src="img/img.jpg" class="avatar">
-                      Names
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="select-col"><input type="checkbox" /></td>
-                    <td class="name-col">
-                      <img src="img/img.jpg" class="avatar">
-                      Names
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table--wrapper clipped">
+                <table class="table--users"> 
+                  <thead>
+                    <tr>
+                      <td class="select-col">Select</td>
+                      <td class="name-col">Name</td> 
+                      <td class="date-col">Date Joined</td>
+                      <td>Remove</td>                 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="current_member">
+                      <td class="select-col"><input type="checkbox" /></td>
+                      <td class="name-col">
+                        <img src="img/img.jpg" class="avatar">
+                        Jaime Peters
+                      </td>
+                      <td class="date-col">20-03-2019</td>
+                    </tr>
+                    <tr class="current_member">
+                      <td class="select-col"><input type="checkbox" /></td>
+                      <td class="name-col">
+                        <img src="img/img.jpg" class="avatar">
+                        Jaime Prendergast
+                      </td>
+                      <td class="date-col">20-03-2019</td>
+                    </tr>
+                    <tr>
+                      <td class="select-col"><input type="checkbox" /></td>
+                      <td class="name-col">
+                        <img src="img/img.jpg" class="avatar">
+                        Jaime Pericas
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="select-col"><input type="checkbox" /></td>
+                      <td class="name-col">
+                        <img src="img/img.jpg" class="avatar">
+                        Jaime Person
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="select-col"><input type="checkbox" /></td>
+                      <td class="name-col">
+                        <img src="img/img.jpg" class="avatar">
+                        Jaime Pearson
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="add-members">
+<!--              <h2>Add New Users</h2>
+              <p>Add users to this group via username or email address.</p>
+              <div class="add-members--fields">
+                <div class="add-members--field-wrapper">
+                  <input type="text" class="field" placeholder="A user's email or username" />               
+                </div>
+                <div class="add-members--field-wrapper">
+                  <input type="text" class="field" placeholder="A user's email or username" />               
+                </div>
+              </div>
+              <div class="add-members--nav">
+                  <a href="groupsettings.html" class="btn btn-black btn-plus">Add more</a>
+                  <a href="groupsettings.html" class="btn btn-black">Send invites</a>
+                </div>
+            </div>-->
+            <div class="save-changes--nav">
+              <a href="groupsettings.html" class="btn btn-primary">Save Group Members</a>
             </div>
           </div>
-          
         </main>
       </div>
     </div>
